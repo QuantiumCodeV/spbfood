@@ -249,7 +249,9 @@ class AmoController extends Controller
         }
         
         if ($success) {
-            return redirect()->route('order.success');
+            return response()->json([
+                'success' => true
+            ]);
         } else {
             return response()->json([
                 'success' => false,
