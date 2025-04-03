@@ -1456,8 +1456,9 @@
                 success: function(response) {
                     // Скрываем прелоадер
                     $('.loader_block').fadeOut();
-                    
+                    console.log(response)
                     if (response.success) {
+                        console.log(response)
                         // Показываем попап с благодарностью
                         $('#thanks_popup').addClass('active');
                         $('.black_layout').addClass('active');
