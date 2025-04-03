@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Disallow: *?
+Disallow: /thanks/*
+Disallow: /thankscall/
+Disallow: yclid=*
+Disallow: etext=*
+
+User-agent: Yandex
+Allow: /
+Disallow: *?
+Disallow: /thanks/*
+Disallow: /thankscall/
+Clean-param: etext&yclid
+
+User-agent: Googlebot
+Allow: /
+Disallow: *?
+Disallow: /thanks/*
+Disallow: /thankscall/
+Disallow: yclid=*
+Disallow: etext=*
