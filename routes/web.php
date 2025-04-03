@@ -42,9 +42,6 @@ Route::get('/site/success', function () {
     return view('success');
 })->name('order.success');
 
-// Добавьте этот маршрут для обработки отправки формы заказа
-Route::post('/site/submit-order', [App\Http\Controllers\AmoController::class, 'submitOrder']);
-
 // Отладочный маршрут - только для разработки, удалить в продакшене
 Route::get('/debug/session', function () {
     if (config('app.debug')) {

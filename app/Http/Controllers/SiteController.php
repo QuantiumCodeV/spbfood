@@ -265,8 +265,10 @@ class SiteController extends Controller
             
             app(\App\Http\Controllers\AmoController::class)->sendToTelegram($data);
             
-            // Перенаправляем на страницу успешного оформления заказа
-            return redirect()->route('order.success');
+            // Возвращаем успешный JSON-ответ
+            return response()->json([
+                'success' => true
+            ]);
             
         } catch (\Exception $e) {
             Log::error('Ошибка при оформлении заказа: ' . $e->getMessage());
