@@ -35,12 +35,15 @@ Route::middleware(['throttle:5,1'])->group(function () {
 });
 
 // Маршрут для оформления заказа через сайт
-Route::post('/site/submit-order', [SiteController::class, 'submitOrder'])->name('order.submit');
+//Route::post('/site/submit-order', [SiteController::class, 'submitOrder'])->name('order.submit');
 Route::get('/site/order-success/{order_id}', [SiteController::class, 'orderSuccess'])->name('order.success');
 
 Route::get('/site/success', function () {
     return view('success');
 })->name('order.success');
+
+// Добавьте этот маршрут для обработки отправки формы заказа
+Route::post('/site/submit-order', [App\Http\Controllers\AmoController::class, 'submitOrder']);
 
 // Отладочный маршрут - только для разработки, удалить в продакшене
 Route::get('/debug/session', function () {

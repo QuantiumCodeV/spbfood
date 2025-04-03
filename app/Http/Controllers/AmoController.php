@@ -106,13 +106,12 @@ class AmoController extends Controller
                 'text' => $text,
                 'parse_mode' => 'HTML'
             ]);
-            
             if ($response->successful()) {
-                return true;
+                return response()->json(['success' => true]);
             }
             
             Log::error('Ошибка отправки в Telegram: ' . $response->body());
-            return false;
+            return response()->json(['success' => false]);
         } catch (\Exception $e) {
             Log::error('Исключение при отправке в Telegram: ' . $e->getMessage());
             return false;
