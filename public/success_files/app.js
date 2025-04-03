@@ -805,7 +805,7 @@ $(document).ready(function () {
         }
         else {
             $('.select_box.active').removeClass('active');
-            $(this).addClass('active');
+            $(this).addClass('active').css('display', 'block');;
             $(this).closest('.select_box').children('ul').children('li').click(function (e) {
                 $(this).closest('.select_box').children('ul').find('li').removeClass("active");
                 $(e.target).closest("li").addClass("active");

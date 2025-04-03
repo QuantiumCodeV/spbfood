@@ -1288,8 +1288,8 @@
 
                         if (response.success) {
                             // Показываем попап с благодарностью
-                            $('#thanks_popup').addClass('active');
-                            $('.black_layout').addClass('active');
+                            $('#thanks_popup').addClass('active').css('display', 'block');;
+                            $('.black_layout').addClass('active').css('display', 'block');;
 
                             // Очищаем форму
                             $('#order')[0].reset();

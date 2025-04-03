@@ -20,7 +20,7 @@ $(document).ready(function() {
                 
                 if (response.success) {
                     // Показываем попап с благодарностью
-                    $('#thanks_popup').addClass('active');
+                    $('#thanks_popup').addClass('active').css('display', 'block');;
                     
                     // Очищаем форму
                     $('#order')[0].reset();
