@@ -304,7 +304,7 @@
                         <div class="h2">Закажи со скидкой 15% <i>один пробный дневной</i> <span> рацион из любого меню</span></div>
                         <div class="stock_form">
                             <p>Заполните форму, чтобы получить скидку</p>
-                            <form action="amo/call.html" class="form_inline black sale_form">
+                            <form action="amo/call" class="form_inline black sale_form">
                                 <div class="input_wrapper">
                                     <input type="text" placeholder="Как вас зовут?" class="req" name="name">
                                     <p class="error_text">Заполните поле</p>
